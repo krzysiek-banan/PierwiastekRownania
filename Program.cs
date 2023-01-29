@@ -31,10 +31,12 @@ namespace PierwiastekRownania
             if (double.IsNaN(rozw.Item1))
             {
                 Console.WriteLine("Równanie nie posiada pierwiastków rzeczywistych");
+                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine($"Pieriastki równania to {rozw.Item1} oraz {rozw.Item2}");
+                Console.ReadKey();
             }
         }
     }
