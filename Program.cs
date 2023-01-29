@@ -1,19 +1,20 @@
 ﻿using System;
 
-namespace PierwiastekRownania
-{
-    class PierwiastekRownaniaKw
+
+
+    public class PierwiastekRownaniaKw
     {
         public static Tuple<double, double> Solve(double a, double b, double c)
         {
             var discriminant = b * b - 4 * a * c;
             if (discriminant < 0)
             {
-                return Tuple.Create(double.NaN, double.NaN);
+                return Tuple.Create(0.0, 0.0);
             }
             else if (discriminant == 0)
             {
-                return Tuple.Create(-b / (2 * a), double.NaN);
+            double delta = -b / (2 * a);
+                return Tuple.Create(delta,delta );
             }
             else
             {
@@ -40,4 +41,4 @@ namespace PierwiastekRownania
             }
         }
     }
-}
+
